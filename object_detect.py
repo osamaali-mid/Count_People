@@ -90,7 +90,7 @@ with detection_graph.as_default():
         # time_ = int(math.floor(framecount // framerate))
         # if time_ / 60 > 5:
         #     jump = 30
-        # elif time >= 60:
+        # elif time_ >= 60:
         #     jump = 15
         # else:
         #     jump = 5
