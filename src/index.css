@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-blue-50 to-blue-100 text-gray-900;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-xl;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-700 font-medium px-6 py-3 rounded-lg border border-gray-200 transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* File upload styles */
+.file-upload-area {
+  @apply border-2 border-dashed border-blue-300 rounded-lg p-8 text-center transition-all duration-200;
+}
+
+.file-upload-area.dragover {
+  @apply border-blue-500 bg-blue-50;
+}
+
+.file-upload-area:hover {
+  @apply border-blue-400 bg-blue-25;
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply w-full bg-gray-200 rounded-full h-2 overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-300 ease-out;
+}
+
+/* Chart container */
+.chart-container {
+  @apply w-full h-80 bg-white rounded-lg shadow-sm border border-gray-100;
+}
+
+/* Video player */
+.video-container {
+  @apply relative bg-black rounded-lg overflow-hidden shadow-lg;
+}
+
+.video-controls {
+  @apply absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4;
+}
+
+/* Custom seekbar */
+.custom-seekbar {
+  @apply w-full h-2 bg-gray-600 rounded-full cursor-pointer relative overflow-hidden;
+}
+
+.custom-seekbar-progress {
+  @apply absolute top-0 left-0 h-full bg-blue-500 transition-all duration-100;
+}
