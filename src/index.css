@@ -81,7 +81,7 @@
 }
 
 .file-upload-area:hover {
-  @apply border-blue-400 bg-blue-25;
+  @apply border-blue-400 bg-blue-50;
 }
 
 /* Progress bar */
